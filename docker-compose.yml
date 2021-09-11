@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  # Seekuur Web App
+  web:
+    image: registry.gitlab.com/osoobe/jaj/impact-tracker-app
+    restart: always
+    env_file:
+        - .env_file
+    networks:
+      - jobnet
+
+networks:
+  jobnet:
